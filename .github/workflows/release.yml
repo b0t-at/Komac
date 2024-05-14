@@ -139,7 +139,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: artifacts
+          name: artifacts-${{ matrix.platform.target }}
           path: |
             target/${{ matrix.platform.target }}/release/${{ steps.rename_binary.outputs.name }}
             target/${{ matrix.platform.target }}/release/${{ steps.rename_binary.outputs.name }}.sha256
